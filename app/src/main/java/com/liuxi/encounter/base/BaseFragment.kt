@@ -1,4 +1,4 @@
-package com.liuxi.encounter.view.base
+package com.liuxi.encounter.base
 
 import android.support.v4.app.Fragment
 
