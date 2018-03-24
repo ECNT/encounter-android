@@ -8,25 +8,31 @@ package com.liuxi.encounter.base.mvp
  */
 interface ContractImpl {
 
+
     /**
      * all view need implement this interface
      */
-    interface View : ViewImpl<Presenter> {
-
+    interface View<in T> {
+        fun setPresenter(presenter: T)
     }
 
     /**
+     * T1->View  T2->Model
      * all Presenter need implement this interface
      */
-    interface Presenter : PresenterImpl<View, Model> {
+    interface Presenter<in T1, in T2> {
+        fun start()
 
+        fun setView(view: T1)
+
+        fun setModel(model: T2)
     }
 
     /**
      * all Model/Data need implement this interface
      */
-    interface Model : ModelImpl<Presenter> {
-
+    interface Model<in T> {
+        fun setPresenter(presenter: T)
     }
 
 }
