@@ -28,29 +28,38 @@ class LaunchActivity : BaseActivity(), LaunchContract.View {
         mPresenter = presenter
     }
 
+    /**
+     * 用户引导
+     */
     override fun showGuide() {
+
 
     }
 
+    /**
+     * 启动动画
+     */
     override fun startAnim() {
 
         animationView.setAnimation("animation1.json")
         animationView.addAnimatorListener(object : Animator.AnimatorListener {
             override fun onAnimationRepeat(animation: Animator?) {
+
             }
 
             override fun onAnimationEnd(animation: Animator?) {
+                mPresenter.jump(this@LaunchActivity)
             }
 
             override fun onAnimationCancel(animation: Animator?) {
             }
 
             override fun onAnimationStart(animation: Animator?) {
+
             }
 
-
         })
-        animationView.loop(true)
+        animationView.loop(false)
         animationView.playAnimation()
     }
 }

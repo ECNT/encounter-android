@@ -3,6 +3,7 @@
     package="com.liuxi.encounter">
 
     <application
+        android:name=".base.BaseApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +20,11 @@
 
         <activity android:name=".view.activity.MainActivity" />
 
+        <activity android:name=".view.activity.LoginActivity" />
 
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
