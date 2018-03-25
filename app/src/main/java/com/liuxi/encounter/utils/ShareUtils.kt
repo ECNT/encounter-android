@@ -1,9 +1,10 @@
-package com.liuxi.encounter.wxapi.widget
+package com.liuxi.encounter.utils
 
 import android.app.Activity
 import com.liuxi.encounter.R
 import com.liuxi.encounter.wxapi.WXShareTask
 import com.liuxi.encounter.wxapi.wechat.widget.ShareModel
+import com.liuxi.encounter.wxapi.widget.ShareDialog
 import java.lang.ref.WeakReference
 import java.util.*
 

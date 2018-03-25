@@ -7,6 +7,7 @@ import com.tencent.mm.opensdk.openapi.IWXAPI
 import com.tencent.mm.opensdk.openapi.WXAPIFactory
 
 /**
+ * 微信核心工具类
  * Created by liuxi on 2018/3/14.
  */
 
