@@ -13,7 +13,7 @@ class WXAuthTask(internal var mActivity: WeakReference<Activity>) {
     fun auth() {
         val req = SendAuth.Req()
         req.scope = WXConstants.SCOPE
-        val api = WXHelper.instance.api
+        val api = WXHelper.api
         api!!.sendReq(req)
 
     }

@@ -16,7 +16,7 @@ class WXEntryActivity : Activity(), IWXAPIEventHandler {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        api = WXHelper.instance.api
+        api = WXHelper.api
         api!!.handleIntent(intent, this)
     }
 
@@ -31,7 +31,7 @@ class WXEntryActivity : Activity(), IWXAPIEventHandler {
         when (baseResp.errCode) {
             0 //用户同意
             -> if (baseResp is SendAuth.Resp) {
-                WXHelper.instance.bind(this@WXEntryActivity, baseResp)
+                WXHelper.bind(this@WXEntryActivity, baseResp)
             }
             -4 //用户拒绝授权
             -> if (baseResp is SendAuth.Resp) {

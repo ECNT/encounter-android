@@ -6,9 +6,6 @@ import android.content.Context
  * Created on 18-1-5 下午2:59
  */
 object Formatter {
-    fun isEmpty(str: String?): Boolean {
-        return str == null || str.isEmpty()
-    }
 
     fun sp2px(context: Context, spValue: Float): Int {
         val fontScale = context.resources.displayMetrics.scaledDensity
@@ -26,10 +23,4 @@ object Formatter {
         return (dipValue * scale + 0.5f).toInt()
     }
 
-    fun formatImageUrl(url: String?): String {
-
-        if (url == null) return ""
-        var str = url + "?imageView2/0/w/500"
-        return url
-    }
 }

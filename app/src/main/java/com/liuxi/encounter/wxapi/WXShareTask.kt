@@ -65,7 +65,7 @@ class WXShareTask(private var mActivity: WeakReference<Activity>, private val is
         req.transaction = buildTransaction("image")
         req.message = message
         req.scene = if (isFriend) SendMessageToWX.Req.WXSceneSession else SendMessageToWX.Req.WXSceneTimeline//好友／朋友圈
-        WXHelper.instance.api!!.sendReq(req)
+        WXHelper.api.sendReq(req)
     }
 
     private fun buildTransaction(type: String?): String {

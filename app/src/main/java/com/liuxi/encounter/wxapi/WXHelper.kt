@@ -11,10 +11,9 @@ import com.tencent.mm.opensdk.openapi.WXAPIFactory
  * Created by liuxi on 2018/3/14.
  */
 
-class WXHelper private constructor() {
+object WXHelper {
 
-    var api: IWXAPI? = null
-        private set
+    lateinit var api: IWXAPI
 
     fun register(context: Context) {
         if (api != null) {
@@ -34,23 +33,6 @@ class WXHelper private constructor() {
     fun bind(activity: Activity, resp: SendAuth.Resp) {
         val code = resp.code
 
-    }
-
-    companion object {
-        private lateinit var sMInstance: WXHelper
-
-        val instance: WXHelper
-            get() {
-                if (sMInstance == null) {
-                    synchronized(WXHelper::class.java) {
-                        if (sMInstance == null) {
-                            sMInstance = WXHelper()
-                        }
-                    }
-
-                }
-                return sMInstance
-            }
     }
 
 }
