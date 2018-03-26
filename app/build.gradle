@@ -31,10 +31,19 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
+    //动画
     implementation 'com.airbnb.android:lottie:2.0.0-beta4'
+    //网络框架
     implementation 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+
+    //微信SDK
     compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    //图片框架
+    implementation 'com.facebook.fresco:fresco:1.8.1'
+    implementation 'com.facebook.fresco:animated-gif:0.12.0'// 支持 GIF 动图，需要添加
+
 
 }
