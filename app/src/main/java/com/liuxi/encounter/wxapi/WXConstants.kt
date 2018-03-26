@@ -5,7 +5,7 @@ package com.liuxi.encounter.wxapi
  */
 object WXConstants {
 
-    const val SCOPE = "2123"
+    const val SCOPE = "212asdas3"
     const val APP_KEY = "snsapi_userinfo";//应用授权作用域
 
 }
